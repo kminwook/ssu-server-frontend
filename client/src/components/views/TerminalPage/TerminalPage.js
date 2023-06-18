@@ -1,21 +1,15 @@
 import React from 'react'
+import WebTerminal from 'WebTerminal';
+import SocketConfig from '../../config/SocketConfig';
 
-function TermianlPage() {
+const TermianlPage = () => {
+    const socketConfig = new SocketConfig();
+
     return (
-        <div>
-            style={{
-                display:"grid",
-                 // width:"100%",
-                // height:"100%",
-                gridTemplateColumns:"50% 50%",
-                gridTemplateRows: "50% 50%"
-            }}
-            <div>1번 뭐지</div>
-            <div>2번 뭐지</div>
-            <div>3번 뭐지</div>
-            <div>CMD 창을 띄운다.</div>
+        <div className="App">
+            <WebTerminal socket={socketConfig} />
         </div>
-    )
-}
+    );
+};
 
-export default TermianlPage
+export default TermianlPage;
