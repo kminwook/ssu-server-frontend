@@ -92,6 +92,32 @@ function LandingPage() {
           }}
           labelPosition={0}
         />
+              <div
+        style={{
+          marginBottom: '425px',
+        }}
+      >
+        <PieChart
+          data={[
+            {
+              value: 40,
+              color: '#F6CB44',
+              name: 'name1',
+            },
+          ]}
+          reveal={40}
+          lineWidth={18}
+          background="#f3f3f3"
+          lengthAngle={360}
+          rounded
+          animate
+          label={({ dataEntry }) => dataEntry.value + '%'}
+          labelStyle={{
+            fontSize: '26px',
+            fill: '#333333',
+          }}
+          labelPosition={0}
+        />
         <button onClick={onSrvRoomClickHandler}>서버 룸</button>
       </div>
     </div>
